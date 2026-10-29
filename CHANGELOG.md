@@ -13,6 +13,9 @@ All notable changes are documented here. Format based on
 - `equivalence_checking/run_lec.sh` wrapper for Conformal LEC.
 
 ### Changed
+- `physical_design/signoff/` reorganised by type and stage (`timing/{1_place_opt,2_post_cts,3_post_route,4_post_route_rerun}`,
+  `power/`, `physical_verification/`); added place_opt, post-CTS and post-route timing path reports.
+- Layer-map files renamed to `streamOut_gpdk045.map` / `streamOut_gpdk045_assura_lvs.map`.
 - Added Modus ATPG results (`synthesis/atpg/`: logs + summary) and quoted them in the README.
 - Redacted the remaining host ID in the two post-route netlist headers.
 - Curated reports are now tracked: `synthesis/reports/`, `synthesis/dft_run/reports/`,

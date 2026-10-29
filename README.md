@@ -53,7 +53,7 @@ The numbers above are quoted from the reports produced by the flow, kept in the 
 | Synthesis / DFT | [`synthesis/reports/`](synthesis/reports/), [`synthesis/dft_run/reports/`](synthesis/dft_run/reports/) |
 | ATPG | [`synthesis/atpg/`](synthesis/atpg/) |
 | Equivalence check | [`equivalence_checking/reports/`](equivalence_checking/reports/) |
-| Place & route signoff | [`physical_design/signoff/`](physical_design/signoff/) |
+| Place & route (timing per stage, power, DRC/LVS-related checks) | [`physical_design/signoff/`](physical_design/signoff/README.md) |
 | Screenshots | [`img/`](img/) |
 
 The bulky raw Innovus/Voltus reports, databases and GDS are git-ignored; regenerate them with the scripts below.

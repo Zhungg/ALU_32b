@@ -16,7 +16,7 @@ on gpdk045 / gsclib045, targeting the two modes defined in `scripts/mmmc.tcl`
 | `config/streamOut_gpdk045.map` | Layer map for GDS stream-out; pin/label text goes to datatype 3. |
 | `config/streamOut_gpdk045_assura_lvs.map` | Same map for the Assura LVS run; pin/label text goes to datatype 0 (same as the drawing shapes) so Assura can see the labels. Only the `Metal*/PIN` and `Metal*/LEFPIN` lines differ. |
 | `results/alu_top_postroute_drc_lvs{,_pg}.v` | Final post-route netlists (plain, and with PG pins for LVS). |
-| `signoff/` | Curated signoff evidence (DRC, connectivity, placement check, antenna, power, setup/hold summaries). |
+| `signoff/` | Timing, power and physical-verification reports, grouped by type and stage — see [signoff/README.md](signoff/README.md). |
 
 ## Session history
 
@@ -41,12 +41,12 @@ Host paths were replaced by `<PROJ_ROOT>` / `<HOME>`.
 
 | Check | File | Result |
 | :--- | :--- | :--- |
-| DRC | `innovus_drc.rpt` | No DRC violations found |
-| Connectivity | `connectivity.rpt` | Found no problems or warnings |
-| Antenna | `alu_top_process_antenna.rpt` | No violations (per-net detail trimmed) |
-| Setup (post-route) | `timing_setup_summary.rpt` | reg2reg WNS +1.537 ns (func + scan views, slow corner), 0 violating paths |
-| Hold (post-route) | `timing_hold_summary.rpt` | reg2reg WNS +0.029 ns (func + scan views, fast corner), 0 violating paths |
-| Power | `alu_top_postRoute_power_func.rpt` | ≈ 0.076 mW (`FUNC_SETUP_VIEW`, 0.2 toggle activity) |
+| DRC | `signoff/physical_verification/innovus_drc.rpt` | No DRC violations found |
+| Connectivity | `signoff/physical_verification/connectivity.rpt` | Found no problems or warnings |
+| Antenna | `signoff/physical_verification/alu_top_process_antenna.rpt` | No violations (per-net detail trimmed) |
+| Setup (post-route) | `signoff/timing/3_post_route/alu32_setup.summary.rpt` | reg2reg WNS +1.537 ns (func + scan views, slow corner), 0 violating paths |
+| Hold (post-route) | `signoff/timing/3_post_route/alu32_hold_hold.summary.rpt` | reg2reg WNS +0.029 ns (func + scan views, fast corner), 0 violating paths |
+| Power | `signoff/power/alu_top_postRoute_power_func.rpt` | ≈ 0.076 mW (`FUNC_SETUP_VIEW`, 0.2 toggle activity) |
 
 LVS was run in Assura against the PG netlist; see `img/check_lvs.png`.
 
