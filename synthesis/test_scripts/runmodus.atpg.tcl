@@ -32,7 +32,7 @@ file delete -force $WORKDIR/testresults;                  # Delete Test Output F
 #-------------------------------------------------------------------------------
 build_model \
     -cell	 alu_top \
-    -techlib	 /home/icer/LAB/RTLtoGDSII/counter_design_database_45nm/lib/slow_vdd1v0_basiccells.v \
+    -techlib	 $::env(SIM_LIB_FUNC) \
     -designsource	 $WORKDIR/alu_top.test_netlist.v \
     -allowmissingmodules	 no \
 

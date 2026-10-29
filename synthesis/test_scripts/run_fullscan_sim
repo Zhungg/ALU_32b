@@ -20,7 +20,7 @@ xrun \
    +libext+.v+.V+.z+.Z+.gz \
    +xmlibdirname+$WORKDIR/Inca_libs_21_36_09 \
    -l $WORKDIR/ncverilog_FULLSCAN.log \
-  -v /home/icer/LAB/RTLtoGDSII/counter_design_database_45nm/lib/slow_vdd1v0_basiccells.v \
+  -v $SIM_LIB_FUNC \
 $WORKDIR/alu_top.test_netlist.v \
 $WORKDIR/testresults/verilog/VER.FULLSCAN.alu_top_atpg.mainsim.v
 
