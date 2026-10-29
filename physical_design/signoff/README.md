@@ -16,6 +16,9 @@ signoff/
 │   ├── 2_post_cts/           after CCOpt CTS, and after post-CTS opt_design
 │   ├── 3_post_route/         post-route timeDesign (setup + hold)   <- numbers quoted in README
 │   └── 4_post_route_rerun/   same post-route check re-run on the final database
+├── clock_tree/post_route/    clock DAG statistics and skew groups (from the post-route database)
+├── routing/                  route summary: net/wire/via statistics
+├── rail_analysis/            Voltus static IR-drop analysis (see its README)
 ├── power/                    post-route power (FUNC_SETUP_VIEW)
 └── physical_verification/    DRC, connectivity, placement, antenna, PG checks
 ```
@@ -41,6 +44,15 @@ Setup is checked at the slow corner (0.9 V / 125 °C), hold at the fast corner
 | `*.cap/.fanout/.length/.tran.rpt` | Design-rule (max cap / fanout / length / transition) reports |
 | `*.slk.rpt`, `*.slk` | Endpoint slack tables |
 | `*.SI_Glitches.rpt` | Signal-integrity glitch analysis |
+
+## Clock tree, routing and rail analysis
+
+| File | Content |
+| :--- | :--- |
+| `clock_tree/post_route/clock_trees.rpt` | Clock DAG: 0 buffers/inverters, 354.75 µm leaf wire |
+| `clock_tree/post_route/skew_groups.rpt` | `clk/FUNC_MODE` and `clk/SCAN_MODE`: 100 sinks each, skew 1 ps |
+| `routing/route_summary.rpt` | 1755 instances, 1130 nets, 21 651 µm wire, 12 381 vias |
+| `rail_analysis/` | VDD IR drop ≤ 35 µV, VSS bounce ≤ 33 µV, 0 violations — [details](rail_analysis/README.md) |
 
 ## Power and physical verification
 

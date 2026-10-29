@@ -1,0 +1,25 @@
+RAIL ANALYSIS REPORT
+Generated Date: Fri Oct 30 07:11:44 2026
+Host Name: <redacted>
+
+
+==============================
+
+==============================
+User: <redacted> 
+Hostname: <redacted> 
+Peak Memory: 0 Mbytes 
+Total CPU time: 00:00:38 
+Total Wall Clock time: 00:00:48 
+Exit status: Successful 
+State Directory: <PROJ_ROOT>/physical_design/reports/alu32_v3_oai32xl_full_signoff/rail_analysis/static_25c 
+Units: Volt, Amp, Ohm, fF 
+
+
+==============================
+POWER NETS
+==============================
+Net Name: VSS
+Net Name: VDD
+Analysis Method: static 
+

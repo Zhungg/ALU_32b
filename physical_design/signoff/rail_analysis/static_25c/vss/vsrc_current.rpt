@@ -1,0 +1,17 @@
+Voltage source current:
+      Range  Source       Source        Location    Layer
+      Index  Current      Name          (um)
+      -----  --------     -------------------------------
+         1    8.4421e-05A   VSSvsrc1   31.80, 0.91  METAL_11
+*
+* Data filtering results for voltage source current:
+  Minimum, Average, Maximum Voltage Source Current: 84.421uA, 84.421uA, 84.421uA
+  Total Current: 84.421uA
+    Range 1(  84.421uA  -    84.421uA ):         1 (100.00%)
+    Range 2(  84.421uA  -    84.421uA ):         0 (  0.00%)
+    Range 3(  84.421uA  -    84.421uA ):         0 (  0.00%)
+    Range 4(  84.421uA  -    84.421uA ):         0 (  0.00%)
+    Range 5(  84.421uA  -    84.421uA ):         0 (  0.00%)
+    Range 6(  84.421uA  -    84.421uA ):         0 (  0.00%)
+    Range 7(  84.421uA  -    84.421uA ):         0 (  0.00%)
+    Range 8(  84.421uA  -    84.421uA ):         0 (  0.00%)

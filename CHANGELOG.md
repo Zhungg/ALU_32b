@@ -13,6 +13,9 @@ All notable changes are documented here. Format based on
 - `equivalence_checking/run_lec.sh` wrapper for Conformal LEC.
 
 ### Changed
+- Added static rail (IR drop) analysis, route summary and post-route clock-tree reports under
+  `physical_design/signoff/{rail_analysis,routing,clock_tree}/`; added `img/ir_drop.png`.
+- README CTS description corrected to match the clock report (no clock buffers inserted).
 - `physical_design/signoff/` reorganised by type and stage (`timing/{1_place_opt,2_post_cts,3_post_route,4_post_route_rerun}`,
   `power/`, `physical_verification/`); added place_opt, post-CTS and post-route timing path reports.
 - Layer-map files renamed to `streamOut_gpdk045.map` / `streamOut_gpdk045_assura_lvs.map`.

@@ -1,0 +1,30 @@
+{
+    "created_on": "2026-Oct-30 07:11:08",
+    "creator": "voltus_rail",
+    "nominal_voltage": "0.899999976",
+    "is_power_net": "true",
+    "is_dynamic_analysis": "false",
+    "results": [
+        {
+            "type": "average",
+            "num_voltages": "9842",
+            "min_node_voltage": "0.89996475",
+            "max_node_voltage": "0.899999976",
+            "num_currents": "9842",
+            "min_tap_current": "-0",
+            "max_tap_current": "9.81837502e-07",
+            "min_voltage_source_current": "-8.4399151091929525e-05",
+            "max_voltage_source_current": "-8.4399151091929525e-05",
+            "min_voltage_source_voltage": "0.89999997615814209",
+            "max_voltage_source_voltage": "0.89999997615814209",
+            "num_peak_currents": "10325",
+            "peak_current_file": "<PROJ_ROOT>\/physical_design\/reports\/alu32_v3_oai32xl_full_signoff\/rail_analysis\/static_25c\/\/VDD\/voltus_rail.iavg",
+            "min_peak_current": "-3.8836984458612278e-05",
+            "max_peak_current": "4.5584405597764999e-05"
+        }
+    ],
+    "VC_SUM_Peak": "8.43991511e-05",
+    "TC_SUM_Peak": "8.44213791e-05",
+    "VC_SUM_Avg": "8.43991511e-05",
+    "TC_SUM_Avg": "8.44213791e-05"
+}

@@ -45,6 +45,8 @@ scripts, and the generated netlists and signoff evidence.
 | DRC (Innovus `verify_drc`, Virtuoso/Assura) | **0 violations** |
 | LVS (Assura) | **Match** — 0 net / device / pin / parameter mismatches |
 | Power (post-route, `FUNC_SETUP_VIEW`, 0.2 toggle activity, 10 ns clock) | ≈ 0.076 mW @ 0.9 V |
+| Static rail analysis (Voltus, 25 °C) | VDD IR drop ≤ 35 µV, ground bounce ≤ 33 µV (limit 45 mV), 0 violations |
+| Clock tree (post-route report) | 100 sinks, 0 clock buffers/inverters, skew 1 ps in functional and scan modes |
 
 The numbers above are quoted from the reports produced by the flow, kept in the repo:
 
@@ -53,7 +55,8 @@ The numbers above are quoted from the reports produced by the flow, kept in the 
 | Synthesis / DFT | [`synthesis/reports/`](synthesis/reports/), [`synthesis/dft_run/reports/`](synthesis/dft_run/reports/) |
 | ATPG | [`synthesis/atpg/`](synthesis/atpg/) |
 | Equivalence check | [`equivalence_checking/reports/`](equivalence_checking/reports/) |
-| Place & route (timing per stage, power, DRC/LVS-related checks) | [`physical_design/signoff/`](physical_design/signoff/README.md) |
+| Place & route (timing per stage, routing, clock tree, power, checks) | [`physical_design/signoff/`](physical_design/signoff/README.md) |
+| Power-rail (IR drop) analysis | [`physical_design/signoff/rail_analysis/`](physical_design/signoff/rail_analysis/README.md) |
 | Screenshots | [`img/`](img/) |
 
 The bulky raw Innovus/Voltus reports, databases and GDS are git-ignored; regenerate them with the scripts below.
@@ -162,8 +165,10 @@ RTL ↔ scan-netlist equivalence is checked with Conformal LEC
 
 ### 4. Clock-tree synthesis
 
-Innovus CCOpt builds a balanced clock tree across all 100 sequential cells for
-both the functional (10 ns) and scan (50 ns) modes.
+Innovus CCOpt synthesizes the clock for the functional (10 ns) and scan (50 ns)
+constraint modes. For this small design the post-route clock report shows 100 sinks per
+mode, no clock buffers or inverters in the clock DAG (354.75 µm of leaf wiring only) and
+a skew of 1 ps. Reports: [`physical_design/signoff/clock_tree/`](physical_design/signoff/clock_tree/post_route/).
 
 ![Clock tree](img/cts.png)
 
@@ -176,6 +181,11 @@ Place & route in Innovus, followed by physical verification.
 | DRC — 0 violations | LVS — Assura match |
 | :---: | :---: |
 | ![DRC](img/check_drc.png) | ![LVS](img/check_lvs.png) |
+
+**Power-grid IR drop** (Voltus, static, 25 °C): worst VDD drop 35 µV on a 0.9 V rail, color scale 0–0.035 mV.
+Details: [`physical_design/signoff/rail_analysis/`](physical_design/signoff/rail_analysis/README.md).
+
+![IR drop](img/ir_drop.png)
 
 ---
 
