@@ -1,6 +1,6 @@
 # 32-bit RISC-V (RV32I) ALU — RTL-to-GDSII in 45 nm
 
-[![CI](https://github.com/Zhungg/ALU_32bit/actions/workflows/ci.yml/badge.svg)](https://github.com/Zhungg/ALU_32bit/actions/workflows/ci.yml)
+[![CI](https://github.com/Zhungg/ALU_32b/actions/workflows/ci.yml/badge.svg)](https://github.com/Zhungg/ALU_32b/actions/workflows/ci.yml)
 [![ISA](https://img.shields.io/badge/ISA-RISC--V%20RV32I-blue.svg)](https://riscv.org/)
 [![Flow](https://img.shields.io/badge/EDA-Cadence%20Digital%20Flow-red.svg)](https://www.cadence.com/)
 [![Process](https://img.shields.io/badge/PDK-Cadence%20GPDK045-green.svg)](NOTICE.md)

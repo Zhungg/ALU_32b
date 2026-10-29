@@ -4,7 +4,7 @@
 #  OS:                Linux x86_64(Host ID <redacted>)
 #  Generated on:      Thu Oct 29 05:44:56 2026
 #  Design:            alu_top
-#  Command:           eval_legacy {saveNetlist /home/icer/projects/ALU_32bit/alu32_rv32i_45nm/physical_design/results/alu_top_postroute_drc_lvs_v3_oai32xl_pg.v -phys -includePowerGround -excludeLeafCell -excludeCellInst {FILL64 FILL32 FILL16 FILL8 FILL4 FILL2 FILL1}}
+#  Command:           eval_legacy {saveNetlist <PROJ_ROOT>/physical_design/results/alu_top_postroute_drc_lvs_v3_oai32xl_pg.v -phys -includePowerGround -excludeLeafCell -excludeCellInst {FILL64 FILL32 FILL16 FILL8 FILL4 FILL2 FILL1}}
 ###############################################################
 */
 module alu_core (
