@@ -1117,7 +1117,7 @@ puts "OAI32X1 instances = [get_db $oai_insts .name]"
 puts "Available OAI32 variants = [get_db [get_db base_cells OAI32*] .name]"
 set PD <PROJ_ROOT>/physical_design
 set srcdb "$PD/results/alu32_post_route_node45_filled_export.enc"
-set map_file "$PD/config/streamOut_gpdk045_11M_assura_lvs.map"
+set map_file "$PD/config/streamOut_gpdk045_assura_lvs.map"
 set cell_gds /eda/PDK/gsclib045_all_v4.8/gsclib045/gds/gsclib045.gds
 set newdb "$PD/results/alu32_post_route_node45_drcfix.enc"
 set out_gds "$PD/results/alu32_post_route_node45_drcfix_pinmap.gds"
@@ -1161,7 +1161,7 @@ foreach i $oai_insts {
 eval_legacy {ecoChangeCell -help}
 set PD <PROJ_ROOT>/physical_design
 set inst u_alu_core/g22167__4733
-set map_file "$PD/config/streamOut_gpdk045_11M_assura_lvs.map"
+set map_file "$PD/config/streamOut_gpdk045_assura_lvs.map"
 set cell_gds /eda/PDK/gsclib045_all_v4.8/gsclib045/gds/gsclib045.gds
 set trialdb "$PD/results/alu32_post_route_drc_lvs_trial.enc"
 set out_gds "$PD/results/alu32_post_route_drc_lvs_trial.gds"
@@ -1284,7 +1284,7 @@ foreach c {OAI32X1 OAI32X2 FILL1 FILL2 FILL4 FILL8 FILL16 FILL32 FILL64} {
 }
 puts "===== INPUT FILES ====="
 puts "ORIGINAL_CHECKPOINT=[file exists $PD/results/alu32_post_route_node45_filled_export.enc]"
-puts "CANDIDATE_MAP=[file exists $PD/config/streamOut_gpdk045_11M_assura_lvs.map]"
+puts "CANDIDATE_MAP=[file exists $PD/config/streamOut_gpdk045_assura_lvs.map]"
 puts "STANDARD_CELL_GDS=[file exists /eda/PDK/gsclib045_all_v4.8/gsclib045/gds/gsclib045.gds]"
 puts "===== PLACEMENT ====="
 eval_legacy {checkPlace}
@@ -1377,7 +1377,7 @@ set PD <PROJ_ROOT>/physical_design
 set inst_name u_alu_core/g22167__4733
 set trialdb "$PD/results/alu32_post_route_oai32x2_pinmap_trial.enc"
 set out_gds "$PD/results/alu32_post_route_oai32x2_pinmap_trial.gds"
-set map_file "$PD/config/streamOut_gpdk045_11M_assura_lvs.map"
+set map_file "$PD/config/streamOut_gpdk045_assura_lvs.map"
 set cell_gds /eda/PDK/gsclib045_all_v4.8/gsclib045/gds/gsclib045.gds
 set out_rpt "$PD/reports/post_route/timing_final_after_eco/streamout_oai32x2_pinmap_trial.rpt"
 set target ""
